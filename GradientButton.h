@@ -10,8 +10,9 @@
 
 @interface GradientButton : UIButton
 
-@property (nonatomic, strong) UIColor *highColor;
-@property (nonatomic, strong) UIColor *lowColor;
+@property (nonatomic, strong) UIColor* highColor;
+@property (nonatomic, strong) UIColor* lowColor;
+@property (nonatomic) NSString* text;
 
 -(void)setupButton;
 

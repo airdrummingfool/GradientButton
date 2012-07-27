@@ -11,7 +11,6 @@
 
 @property (nonatomic, strong) CAGradientLayer *gradientLayer;
 
--(void)setupButton;
 -(void)configureButtonLayer;
 -(void)updateButton;
 
@@ -58,7 +57,7 @@
 }
 
 #pragma mark getters & setters
--(CAGradientLayer *)gradientLayer {
+-(CAGradientLayer* )gradientLayer {
 	if ( _gradientLayer == nil ) {
 		_gradientLayer = [[CAGradientLayer alloc] init];
 		_gradientLayer.bounds = [self bounds];
@@ -68,12 +67,12 @@
 	return _gradientLayer;
 }
 
--(void)setHighColor:(UIColor*)color {
+-(void)setHighColor:(UIColor* )color {
     _highColor = color;
     [self updateButton];
 }
 
-- (void)setLowColor:(UIColor*)color {
+- (void)setLowColor:(UIColor* )color {
     _lowColor = color;
     [self updateButton];
 }
@@ -81,6 +80,14 @@
 -(void)setHighlighted:(BOOL)highlighted {
 	[super setHighlighted:highlighted];
 	[self updateButton];
+}
+
+-(void)setText:(NSString *)text {
+	[self setTitle:text forState:UIControlStateNormal];
+}
+
+-(NSString* )text {
+	return self.titleLabel.text;
 }
 
 @end
