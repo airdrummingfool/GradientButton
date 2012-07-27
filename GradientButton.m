@@ -24,6 +24,13 @@
 @synthesize gradientLayer = _gradientLayer;
 
 #pragma mark init and setup methods
+-(id)initWithFrame:(CGRect)frame {
+	if ( self = [super initWithFrame:frame] ) {
+		[self setupButton];
+	}
+	return self;
+}
+
 -(void)awakeFromNib {
 	[self setupButton];
 }
