@@ -90,4 +90,13 @@
 	return self.titleLabel.text;
 }
 
+-(void)setTextColor:(UIColor *)textColor {
+	[self setTitleColor:textColor forState:UIControlStateNormal];
+	[self setTitleColor:textColor forState:UIControlStateHighlighted];
+}
+
+-(UIColor* )textColor {
+	return [self titleColorForState:UIControlStateNormal];
+}
+
 @end

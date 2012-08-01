@@ -13,6 +13,7 @@
 @property (nonatomic, strong) UIColor* highColor;
 @property (nonatomic, strong) UIColor* lowColor;
 @property (nonatomic) NSString* text;
+@property (nonatomic, assign) UIColor* textColor;
 
 -(void)setupButton;
 
